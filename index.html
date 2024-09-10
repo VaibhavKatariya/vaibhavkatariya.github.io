@@ -1,59 +1,198 @@
-<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vaibhav Katariya - Resume</title>
+    <title>Project A</title>
+    <link rel="shortcut icon" href="https://pbs.twimg.com/media/Ex0xMHXVgAIK1L7?format=jpg&name=900x900"
+        type="image/x-icon">
+</head>
+
+<body>
     <style>
-        /* Light mode styles */
-        body {
-            background-color: #f5f5f5;
-            color: #333;
+        @font-face {
+            src: url("https://ik.imagekit.io/sheryians/SiteStaticFiles/Gilroy-Extrabold_YC6oQDa3Ix.ttf?updatedAt=1697720439904");
+            font-family: "Gilroy";
+            font-weight: 700;
         }
 
-        /* Dark mode styles */
-        body.dark-mode {
-            background-color: #333;
-            color: #f5f5f5;
+        @font-face {
+            src: url("https://ik.imagekit.io/sheryians/SiteStaticFiles/Gilroy-Bold_JK4cTGJOE.ttf?updatedAt=1697720175118");
+            font-family: "Gilroy";
+            font-weight: 600;
         }
 
-        /* Header styles */
-        header {
-            background-color: #007bff;
-            color: #fff;
-            padding: 20px;
+        @font-face {
+            src: url("https://ik.imagekit.io/sheryians/SiteStaticFiles/Gilroy-Semibold_zTZ2PgJOF.ttf?updatedAt=1697720387357");
+            font-family: "Gilroy";
+            font-weight: 500;
         }
 
-        /* Footer styles */
-        footer {
-            background-color: #007bff;
-            color: #fff;
-            padding: 20px;
+        @font-face {
+            src: url("https://ik.imagekit.io/sheryians/SiteStaticFiles/Gilroy-Medium_eHDK2RllDd.ttf?updatedAt=1697720216741");
+            font-family: "Gilroy";
+            font-weight: 400;
+        }
+
+        @font-face {
+            src: url("https://ik.imagekit.io/sheryians/SiteStaticFiles/Gilroy-UltraLight_GObAYY-eiQ.ttf?updatedAt=1710171746221");
+            font-family: "Gilroy";
+            font-weight: 100;
+        }
+
+        :root {
+            --primary: #10a37f;
+            --secondary: #075c48;
+            --white: #fff;
+            --primaryLight: #F8F8F8;
+            --primaryDark: #222222;
+            --secondaryLight: #dbdbdb;
+            --secondaryLightActive: #adadad;
+            --secondaryDark: #ececec;
+            --secondaryDarkShadow: rgba(0, 0, 0, 0.16);
+            --textColor: #7BBA81;
+            --special: #d2af7a;
+            --ternary: #c4c9d3;
+            --error: #e74c3c;
+            --nextButton: rgb(242, 78, 9);
+            --maxPageWidth: 110rem;
+            --discord: #7b40ff;
+            --link: rgb(0, 71, 125);
+            --highlight: rgb(255, 204, 0);
+            --hackathoneGreen: rgb(9, 185, 76);
+            --backgroundColor: #0c0f14;
+            --borderRadius: 3rem;
+            --buttonFontSize: 1.5rem;
+        }
+
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+            font-family: "Gilroy";
+            user-select: none;
+            text-rendering: optimizeSpeed;
+            color: var(--primaryLight);
+        }
+
+        .preLoader {
+            position: fixed;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 102;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: var(--backgroundColor);
+            flex-direction: column;
+        }
+
+        .preLoader .center .text {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            color: rgba(230, 230, 230, 0.86);
+        }
+
+        .preLoader .center .text p {
+            padding-top: 10px;
+        }
+
+        .preLoader .center .text h1 {
+            font-weight: 600;
+            font-size: 2.1rem;
+        }
+
+        .preLoader .center .text h1 .loading {
+            font-weight: 600;
+            animation: loading 1s linear infinite alternate;
+            color: #fcfcfc;
+        }
+
+        @keyframes loading {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* About Section */
+        .about {
+            margin-top: 15vh;
+            text-align: center;
+            color: var(--primaryLight);
+        }
+
+        .about h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-links a {
+            color: var(--primaryLight);
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--highlight);
+        }
+
+        .social-links svg {
+            width: 30px;
+            height: 30px;
+        }
+
+        .social-links a{
+            margin-top: 15px;
         }
     </style>
-</head>
-<body>
-    <header>
-        <h1>Vaibhav Katariya</h1>
-        <h2>Full Stack Developer</h2>
-    </header>
 
-    <main>
-        <!-- Your resume content goes here -->
-    </main>
+    <section class="preLoader">
+        <div class="center">
+            <div class="text">
+                <h1>Maintenance Notice <span class="loading">....</span></h1>
+                <p>We are currently working on a new look for our website! <br> In the meantime, you can still visit our
+                    blog at its new address <a href="https://kailyhere.blogspot.com">here</a><br><br>Thank you for your
+                    patience and understanding!</p>
+            </div>
+        </div>
 
-    <footer>
-        &copy; 2022 Vaibhav Katariya
-    </footer>
+        <div class="about">
+            <h2>About Me</h2>
+            <p>👋 Hello there! I&apos;m Vaibhav Katariya, passionate about creating modern and engaging user experiences 💻</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/VaibhavKatariyaa" target="_blank">
+                    <!-- LinkedIn SVG Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                        <path
+                            d="M1.146 0C.513 0 0 .512 0 1.146v13.708C0 15.487.513 16 1.146 16h13.708C15.487 16 16 15.487 16 14.854V1.146C16 .513 15.487 0 14.854 0H1.146zM4.943 12.709H3.04V6.575h1.904v6.134zm-1.015-6.99a1.104 1.104 0 1 1 0-2.207 1.104 1.104 0 0 1 0 2.207zm8.01 6.99h-1.905v-2.986c0-.711-.014-1.628-1.03-1.628-1.031 0-1.188.803-1.188 1.571v3.043h-1.906V6.575h1.83v.837h.026c.255-.483.881-1.006 1.812-1.006 1.937 0 2.295 1.274 2.295 2.93v3.373z" />
+                    </svg>
+                </a>
+                <a href="https://github.com/VaibhavKatariya" target="_blank">
+                    <!-- GitHub SVG Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                        <path
+                            d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.23 1.87.88 2.33.67.07-.52.28-.88.51-1.09-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.68 7.68 0 0 1 2-.27c.68.003 1.37.093 2 .27 1.53-1.03 2.2-.82 2.2-.82.45 1.1.17 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.008 8.008 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
 
-    <script>
-        // Dark mode functionality
-        const body = document.querySelector('body');
-        const darkModeToggle = document.querySelector('#dark-mode-toggle');
+    </section>
 
-        darkModeToggle.addEventListener('change', () => {
-            body.classList.toggle('dark-mode');
-        });
-    </script>
+
 </body>
+
 </html>
